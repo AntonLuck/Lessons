@@ -1,0 +1,115 @@
+.water-drop {
+  background-color: lightblue;
+  width: 25px;
+  height: 25px;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 25px;
+  -webkit-border-bottom-right-radius: 25px;
+  -webkit-border-bottom-left-radius: 25px;
+  -webkit-transform: rotate(45deg);
+  -webkit-box-shadow: 1px 1px 1px #1a1a1a;
+          box-shadow: 1px 1px 1px #1a1a1a;
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  -webkit-animation: dropping 3s infinite;
+          animation: dropping 3s infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 0.11, 0.99, 0.57);
+          animation-timing-function: cubic-bezier(1, 0.11, 0.99, 0.57);
+}
+
+.container {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-top: 200px;
+}
+
+.waves {
+  border: 1px solid aqua;
+  opacity: 1;
+  width: 100px;
+  height: 17px;
+  border-radius: 50px;
+  -moz-border-radius: 250px / 50px;
+  -webkit-border-radius: 250px / 50px;
+  position: absolute;
+  top: 370px;
+  margin-left: 220px;
+  -webkit-animation: waves 3s infinite;
+          animation: waves 3s infinite;
+}
+
+.waves-small {
+  border: 1px solid aqua;
+  opacity: 1;
+  width: 90px;
+  height: 11px;
+  border-radius: 50px;
+  -moz-border-radius: 250px / 50px;
+  -webkit-border-radius: 250px / 50px;
+  position: absolute;
+  top: 372px;
+  margin-left: 225px;
+  -webkit-animation: waves 3s infinite;
+          animation: waves 3s infinite;
+}
+
+@-webkit-keyframes waves {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+    opacity: 0.0;
+  }
+}
+
+@keyframes waves {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+    opacity: 0.0;
+  }
+}
+
+@-webkit-keyframes dropping {
+  0% {
+    top: 10px;
+    opacity: 0.9;
+  }
+  10% {
+    top: 20;
+    opacity: 0.9;
+  }
+  100% {
+    top: 370px;
+    opacity: 0.5;
+  }
+}
+
+@keyframes dropping {
+  0% {
+    top: 10px;
+    opacity: 0.9;
+  }
+  10% {
+    top: 20;
+    opacity: 0.9;
+  }
+  100% {
+    top: 370px;
+    opacity: 0.5;
+  }
+}
+/*# sourceMappingURL=style.css.map */
